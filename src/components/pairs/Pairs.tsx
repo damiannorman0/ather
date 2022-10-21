@@ -73,28 +73,35 @@ const Pairs = () => {
 
     });
     const selectedName:string = (selected && pairs.length && selected?.name) || '';
+    const handle = (e:any) => {
+        if(e.type === 'keydown') {
+            if(e.key !== 'Enter') {
+                return;
+            }
+        }
+
+        const target:HTMLElement = e.target as HTMLElement;
+        const index:number = +(target.dataset.index || -1);
+
+        if(target.dataset.itemType === 'pin') {
+            const ref:any = [...pinned];
+            if(ref[index]) {
+                ref[index] = undefined;
+            } else {
+                ref[index] =  pairs[index];
+            }
+
+            dispatch(setPinned(ref));
+
+        } else {
+            dispatch(select(pairs[index]));
+        }
+    }
 
     return (
         <section aria-label='symbols' className={styles.container}>
             <h2>{selectedName}</h2>
-            <ul tabIndex={0} className={styles.pairs} onClick={(e) => {
-                const target:HTMLElement = e.target as HTMLElement;
-                const index:number = +(target.dataset.index || -1);
-
-                if(target.dataset.itemType === 'pin') {
-                    const ref:any = [...pinned];
-                    if(ref[index]) {
-                        ref[index] = undefined;
-                    } else {
-                        ref[index] =  pairs[index];
-                    }
-
-                    dispatch(setPinned(ref));
-
-                } else {
-                    dispatch(select(pairs[index]));
-                }
-            }}>
+            <ul tabIndex={0} className={styles.pairs} onKeyDown={handle} onClick={handle}>
                 {pairsItems}
             </ul>
         </section>
