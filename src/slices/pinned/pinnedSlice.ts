@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import { RootState } from 'store/store';
-import {IPair} from "../../api/dataTypes";
+import {IPair} from "api/dataTypes";
 
 export interface IPinnedState {
   value: IPair[];

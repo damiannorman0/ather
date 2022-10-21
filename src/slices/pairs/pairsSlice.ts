@@ -34,7 +34,6 @@ export const updatePairs = createAsyncThunk(
         }
 
         return store.getState().pairs.value.reduce((total:any, item:IPair) => {
-          // @ts-ignore
           const latestItem:IPairUpdate = latest[item.name] as IPairUpdate;
           const updated:IPair =  {
             ...item,

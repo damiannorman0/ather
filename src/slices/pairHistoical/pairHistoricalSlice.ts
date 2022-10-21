@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from 'store/store';
 import { fetchPairHistorical } from 'api';
-import {IPairHistoric} from "../../api/dataTypes";
+import {IPairHistoric} from "api/dataTypes";
 
 export interface PairHistoricalState {
   value: IPairHistoric[];
