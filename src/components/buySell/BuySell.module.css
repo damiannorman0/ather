@@ -1,0 +1,38 @@
+.container {
+  background-color: lightblue;
+  font-size: small;
+  color: black;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+
+.createTrade {
+  background-color: seashell;
+  border-radius: 20px;
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.trades {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.trades ul {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

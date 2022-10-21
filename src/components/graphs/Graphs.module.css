@@ -1,0 +1,14 @@
+.container {
+  width: 60%;
+}
+
+.graph1 {
+  width: 500px;
+  height: 700px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}

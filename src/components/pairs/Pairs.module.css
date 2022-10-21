@@ -1,0 +1,19 @@
+.container {
+  width: 30%;
+}
+
+.pairs {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100px;
+  height: 100%;
+  min-height: 50px;
+  max-height: 380px;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+}

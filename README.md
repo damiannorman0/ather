@@ -1,3 +1,8 @@
+# Set Up
+
+Create a .env file, and add REACT_APP_KEY and REACT_APP_SECRET vars if using auth'd api endpoints
+Items prices updated in real-time if they are pinned
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.

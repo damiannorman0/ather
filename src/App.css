@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Andale Mono";
+
 }
 
 .App-logo {
@@ -13,17 +19,84 @@
   }
 }
 
-.App-header {
-  min-height: 100vh;
+header {
+  width: 100%;
+  height: 150px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  font-size: 3em;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: seashell;
+  color: black;
+  border-bottom: solid;
+}
+
+header h1 {
+  padding: 20px;
+}
+
+p {
+  font-size: small;
+}
+
+header img {
+  opacity: 0.25;
+  max-width: 300px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .App-link {
   color: rgb(112, 76, 182);
+}
+
+section {
+  margin: 10px;
+  min-width: 400px;
+}
+
+form {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-size: medium;
+}
+
+label {
+  padding: 5px;
+}
+
+input {
+  padding: 2px;
+  border-radius: 5px;
+  border-width: thin;
+}
+
+button {
+  background-color: hotpink;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  font-family: "Andale Mono";
 }
 
 @keyframes App-logo-float {
