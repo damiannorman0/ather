@@ -23,7 +23,7 @@ const Pair = (props:IPairProps) => {
 
     let liveSVG;
     if(props.isPinned) {
-        liveSVG = <div className={styles.pinLive} data-index={props.index}>
+        liveSVG = <div className={styles.pinLive} data-index={props.index} tabIndex={0} aria-label={"live"}>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                  className="bi bi-broadcast" viewBox="0 0 16 16">
                 <path
@@ -42,7 +42,7 @@ const Pair = (props:IPairProps) => {
              style={pinnedIndexStyle}>
             {props.name} - PRICE:{props.price}
             {liveSVG}
-            <div className={`${styles.pin} ${unpinClassName}`} data-index={props.index} data-item-type='pin'>
+            <div className={`${styles.pin} ${unpinClassName}`} data-index={props.index} data-item-type='pin' tabIndex={0} aria-label={"pin"}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pin"
                      viewBox="0 0 16 16">
                     <path
