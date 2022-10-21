@@ -1,4 +1,4 @@
-# Set Up
+# Ather Test Project Set Up
 
 Create a .env file, and add REACT_APP_KEY and REACT_APP_SECRET vars if using auth'd api endpoints
 Items prices updated in real-time if they are pinned
